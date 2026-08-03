@@ -1,1 +1,79 @@
-{"_version":"1.0","runId":"wf_6a6b34d6-77c","stage":"deploy-dotnet","timestamp":"2026-07-10T07:19:08.209775+00:00","deployStatus":"VALIDATED_READY","target":{"platform":"Sitecore XP 10.4 MVC (.NET 8.0)","deploy_method":"dotnet publish -> IIS / Azure App Service","entry_assembly":"Cno.Web.dll"},"buildValidation":{"status":"PASSED","dotnet_build_gate":{"ok":true,"strict":true,"errors":0,"warnings":0,"residual_bands":0,"razor_findings":0,"build_succeeded":true},"verify_bundle":{"ok":true,"gate_ok":true},"total_source_files":151,"total_bytes":112777},"serviceReconciliation":{"total_source_impls":16,"total_emitted":16,"total_missing":0},"goNoGo":"GO"}
+{
+  "_version": "1.0",
+  "runId": "wf_6a6b34d6-77c",
+  "stage": "deploy-dotnet",
+  "timestamp": "2026-07-10T07:19:08.209775+00:00",
+  "deployStatus": "VALIDATED_READY",
+  "target": {
+    "platform": "Sitecore XP 10.4 MVC (.NET 8.0)",
+    "deploy_method": "dotnet publish -> IIS / Azure App Service",
+    "entry_assembly": "Cno.Web.dll"
+  },
+  "buildValidation": {
+    "status": "PASSED",
+    "dotnet_build_gate": {
+      "ok": true,
+      "strict": true,
+      "errors": 0,
+      "warnings": 0,
+      "residual_bands": 0,
+      "razor_findings": 0,
+      "build_succeeded": true
+    },
+    "verify_bundle": {
+      "ok": true,
+      "gate_ok": true
+    },
+    "total_source_files": 151,
+    "total_bytes": 112777,
+    "files_by_directory": {
+      "": 3,
+      "Models": 40,
+      "Sitecore": 1,
+      "_reconcile": 1,
+      "Controllers": 3,
+      "Abstractions": 39,
+      "Pipelines": 12,
+      "Infrastructure": 28,
+      "Services": 11,
+      "Views": 1,
+      "Views/AccountClaimWizard": 1,
+      "Views/AccountLtcEligibility": 1,
+      "Views/AccountView": 1,
+      "Views/Home": 1,
+      "Views/AccountInit": 1,
+      "Views/AccountMedsuppCrossover": 1,
+      "Views/AccountPolicyDetail": 1,
+      "Views/AccountClaimActions": 1,
+      "Views/AccountDocumentsInclude": 1,
+      "Views/AccountDeathClaimWizard": 1,
+      "Views/AccountSummaryHeader": 1,
+      "Views/AccountAnnuityDistribution": 1
+    }
+  },
+  "serviceReconciliation": {
+    "total_source_impls": 16,
+    "total_emitted": 16,
+    "total_missing": 0
+  },
+  "packageSummary": {
+    "manifest_present": true,
+    "deploy_readme_present": true
+  },
+  "deployStepsCompleted": [
+    "dotnet build (0 errors, 0 warnings)",
+    "dotnet build gate (strict=True) PASSED",
+    "verify_bundle gate PASSED",
+    "Service-impl reconciliation: 16/16 source nodes mapped to C# targets",
+    "Package manifest generated (SHA-256)",
+    "DEPLOY-README.md authored"
+  ],
+  "deployStepsPending": [
+    "Azure App Service / IIS provisioning",
+    "SQL Server schema deployment (EF Core migrations)",
+    "Sitecore XP rendering host registration",
+    "SAML SSO configuration with enterprise IdP",
+    "Swap in-memory repositories for EF Core DbContext"
+  ],
+  "goNoGo": "GO"
+}

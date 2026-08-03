@@ -1,1 +1,135 @@
-{"service_dispositions":[{"source":"BenefitRequestServiceImpl.java","target":"Services/BenefitRequestService.cs","guid":"f710496f-1a8e-535d-9e7f-4427e4f35983","disposition":"emitted","status":"mapped"}],"total_source":16,"total_emitted":16,"total_missing":0}
+{
+  "service_dispositions": [
+    {
+      "source": "BenefitRequestServiceImpl.java",
+      "target": "Services/BenefitRequestService.cs",
+      "guid": "f710496f-1a8e-535d-9e7f-4427e4f35983",
+      "methods": ["RequestBenefitAsync","LtcBenefitRequestAsync","DeathBenefitRequestAsync","ClaimContestabilityCheckAsync","GetMaxBenefitAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "BillingServiceImpl.java",
+      "target": "Services/BillingService.cs",
+      "guid": "2ac92934-1007-5114-825a-af209be5aed3",
+      "methods": ["GetInvoicesAsync","GenerateInvoiceAsync","GenerateBatchAsync","GetBalanceAsync","ProcessDunningAsync","GetDueSchedulesAsync","GetLedgerAsync","PostLedgerEntryAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "ClaimAdjudicationServiceImpl.java",
+      "target": "Services/ClaimAdjudicationService.cs",
+      "guid": "9d77632f-fa72-5ae3-94f6-424503d075c5",
+      "methods": ["AdjudicateAsync","PriceLinesAsync","ApproveAsync","DenyAsync","PendAsync","FindPendedAsync","GetRemainingBenefitAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "CommissionServiceImpl.java",
+      "target": "Services/CommissionService.cs",
+      "guid": "44824815-6a8f-5c34-8815-112ee70e62b3",
+      "methods": ["CalculateCommissionAsync","GetAgentCommissionsAsync","ChargebackAsync","GetAgentYtdAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "DocumentServiceImpl.java",
+      "target": "Services/DocumentService.cs",
+      "guid": "9d830696-1b21-5872-897a-d2b7894d429a",
+      "methods": ["GetDocumentsAsync","UploadDocumentAsync","DownloadDocumentAsync","GetStatementsAsync","GenerateStatementAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "EnrollmentServiceImpl.java",
+      "target": "Services/EnrollmentService.cs",
+      "guid": "cc1a7e11-ea02-50c9-ae39-72deb0e9efe6",
+      "methods": ["EnrollAsync","CheckEligibilityAsync","GetPendingApplicationsAsync","UnderwriteAsync","IssuePolicyAsync","CalculatePremiumAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "NotificationServiceImpl.java",
+      "target": "Services/NotificationService.cs",
+      "guid": "57391e3f-3506-575f-92ca-15d2f9592eb8",
+      "methods": ["SendEmailAsync","SendSmsAsync","NotifyClaimStatusChangeAsync","NotifyPaymentConfirmationAsync","NotifyLtcCompanionAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "PaymentServiceImpl.java",
+      "target": "Services/PaymentService.cs",
+      "guid": "06fd7b6d-3445-5649-8884-8ad78fbaf3e1",
+      "methods": ["ProcessPaymentAsync","GetAllocatePaymentsAsync","ReversePaymentAsync","GetPaymentMethodsAsync","AddPaymentMethodAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "PolicyLocalServiceImpl.java",
+      "target": "Services/PolicyService.cs",
+      "guid": "f42b2f6a-c71f-5105-b4d9-e8a51127d037",
+      "methods": ["GetPoliciesForUserAsync","GetClaimsAsync","FileClaimAsync","GetTotalPremiumDueAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "PolicyServiceImpl.java",
+      "target": "Services/PolicyService.cs",
+      "guid": "f42b2f6a-c71f-5105-b4d9-e8a51127d037",
+      "methods": ["EndorseAsync","AddRiderAsync","RemoveRiderAsync","UpdateBeneficiariesAsync","UpdateAddressAsync","RequestLoanAsync","RepayLoanAsync","UpdateDividendElectionAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "ReinstatementServiceImpl.java",
+      "target": "Services/ReinstatementService.cs",
+      "guid": "a52f1400-dafe-577c-a6c6-ad03ea3d0313",
+      "methods": ["QuoteReinstatementAsync","IsEligibleForReinstatementAsync","ReInstateAsync","AutoReinstateAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "UnderwritingServiceImpl.java",
+      "target": "Services/UnderwritingService.cs",
+      "guid": "d840fa6e-92bb-5ebc-a24f-4a2de1801ec4",
+      "methods": ["RatePolicyAsync","DetermineRiskClassAsync","CalculateRatingFactorAsync","RequiresMedicalExamAsync","DeclineAsync"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "BeneficiaryRules.java",
+      "target": "Pipelines/BeneficiaryRules.cs",
+      "guid": "5482841e-461a-5cc2-b377-4899f04a629a",
+      "methods": ["Validate","ValidateHierarchy"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "DistributionRules.java",
+      "target": "Pipelines/DistributionRules.cs",
+      "guid": "223d0528-b2d9-5069-8828-98c4612d6c37",
+      "methods": ["ClassifyDistribution","ExceedsSupervisorThreshold","CalculateSurrenderCharge","CalculateFederalWithholding"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "ReinstatementRules.java",
+      "target": "Pipelines/ReinstatementRules.cs",
+      "guid": "1ee6f20b-8501-5529-aefb-6a7a82df9585",
+      "methods": ["IsWithinWindow","AutoReinstateEligible","CalculateBackPremium"],
+      "disposition": "emitted",
+      "status": "mapped"
+    },
+    {
+      "source": "UnderwritingRules.java",
+      "target": "Pipelines/UnderwritingRules.cs",
+      "guid": "e357d171-2eca-59ba-b123-cc8c551cc12f",
+      "methods": ["DetermineRiskClass","RatingFactor","RequiresMedicalExam"],
+      "disposition": "emitted",
+      "status": "mapped"
+    }
+  ],
+  "total_source": 16,
+  "total_emitted": 16,
+  "total_missing": 0
+}
